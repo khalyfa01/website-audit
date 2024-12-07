@@ -5,24 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test GTM Kayak</title>
     
-     <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-KSZLGCQS');</script>
     <!-- End Google Tag Manager -->
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #0073e6;
+            margin-top: 50px;
+        }
+
+        button {
+            background-color: #0073e6;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            margin: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #005bb5;
+        }
+
+        button:active {
+            background-color: #003f7f;
+        }
+    </style>
 </head>
 <body>
     <h1>Welcome to my test webpage for Kayak</h1>
     <button id="booking_button">Book</button>
-    <button id="scroll_button">Simulate scrolling</button>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KSZLGCQS"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <button id="scroll_button">Simulate Scrolling</button>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KSZLGCQS"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+
     <script>
-        // Simulation de clic sur "Réserver"
+        // Simulation of "Book" button click
         document.getElementById("booking_button").addEventListener("click", function () {
             console.log("Click on Reserve detected!");
             dataLayer.push({
@@ -33,7 +70,7 @@
             });
         });
 
-        // Simulation de défilement
+        // Simulation of scrolling
         document.getElementById("scroll_button").addEventListener("click", function () {
             console.log("Scrolling detected!");
             dataLayer.push({
