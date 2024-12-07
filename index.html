@@ -14,9 +14,9 @@
     <!-- End Google Tag Manager -->
 </head>
 <body>
-    <h1>Bienvenue sur ma page de test pour Kayak</h1>
-    <button id="booking_button">Réserver</button>
-    <button id="scroll_button">Simuler un défilement</button>
+    <h1>Welcome to my test webpage for Kayak</h1>
+    <button id="booking_button">Book</button>
+    <button id="scroll_button">Simulate scrolling</button>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KSZLGCQS"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -24,7 +24,7 @@
     <script>
         // Simulation de clic sur "Réserver"
         document.getElementById("booking_button").addEventListener("click", function () {
-            console.log("Clic sur Réserver détecté !");
+            console.log("Click on Reserve detected!");
             dataLayer.push({
                 event: "booking_click",
                 destination: "Paris",
@@ -35,7 +35,7 @@
 
         // Simulation de défilement
         document.getElementById("scroll_button").addEventListener("click", function () {
-            console.log("Défilement détecté !");
+            console.log("Scrolling detected!");
             dataLayer.push({
                 event: "scroll",
                 percent_scrolled: 90
