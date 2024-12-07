@@ -51,7 +51,7 @@
 <body>
     <h1>Welcome to my test webpage for Kayak</h1>
     <button id="booking_button">Book</button>
-    <button id="scroll_button">Simulate Scrolling</button>
+    <button id="filter_button">Simulate Filter Change</button>
 
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KSZLGCQS"
@@ -70,14 +70,15 @@
             });
         });
 
-        // Simulation of scrolling
-        document.getElementById("scroll_button").addEventListener("click", function () {
-            console.log("Scrolling detected!");
-            dataLayer.push({
-                event: "scroll",
-                percent_scrolled: 90
-            });
+         // Simulation of click on "Simulate Filter Change"
+        document.getElementById("filter_button").addEventListener("click", function () {
+        console.log("Filter change detected!");
+        dataLayer.push({
+            event: "filter_change",
+            filter_type: "price_range",
+            filter_value: "100-200"
         });
+    });
     </script>
 </body>
 </html>
