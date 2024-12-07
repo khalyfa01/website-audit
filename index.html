@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test GTM Kayak</title>
+    
+     <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KSZLGCQS');</script>
+    <!-- End Google Tag Manager -->
+</head>
+<body>
+    <h1>Bienvenue sur ma page de test pour Kayak</h1>
+    <button id="booking_button">Réserver</button>
+    <button id="scroll_button">Simuler un défilement</button>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KSZLGCQS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <script>
+        // Simulation de clic sur "Réserver"
+        document.getElementById("booking_button").addEventListener("click", function () {
+            console.log("Clic sur Réserver détecté !");
+            dataLayer.push({
+                event: "booking_click",
+                destination: "Paris",
+                price: 300,
+                currency: "EUR"
+            });
+        });
+
+        // Simulation de défilement
+        document.getElementById("scroll_button").addEventListener("click", function () {
+            console.log("Défilement détecté !");
+            dataLayer.push({
+                event: "scroll",
+                percent_scrolled: 90
+            });
+        });
+    </script>
+</body>
+</html>
