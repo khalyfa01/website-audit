@@ -59,7 +59,7 @@
     <!-- End Google Tag Manager (noscript) -->
 
     <script>
-        // Simulation of "Book" button click
+        // Booking Click
         document.getElementById("booking_button").addEventListener("click", function () {
             console.log("Click on Reserve detected!");
             dataLayer.push({
@@ -70,15 +70,16 @@
             });
         });
 
-         // Simulation of click on "Simulate Filter Change"
+        // Filter Change
         document.getElementById("filter_button").addEventListener("click", function () {
-        console.log("Filter change detected!");
-        dataLayer.push({
-            event: "filter_change",
-            filter_type: "price_range",
-            filter_value: "100-200"
+            console.log("Filter change detected!");
+            dataLayer.push({
+                event: "filter_change",
+                filter_type: "price_range",
+                filter_value: "100-200"
+            });
         });
-    });
     </script>
 </body>
 </html>
+
