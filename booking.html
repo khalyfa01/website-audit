@@ -4,6 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booking Page</title>
+          <!-- Couche de données pour le suivi des pages vues -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        dataLayer.push({
+            event: "page_view",
+            page_view: {
+                page_title: "Booking Page",
+                page_url: window.location.href,
+                page_category: "booking",
+                kyk_vertical: "flight",
+                kyk_user_language: "fr",
+                kyk_device_type: "desktop",
+                kyk_is_logged_in: true
+            }
+        });
+    </script>
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
